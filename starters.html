@@ -404,26 +404,26 @@
     </footer>
 
 <script>  
-      let cart = []; // Array to store cart items  
+      let cart = [];  
    
-// Function to add items to the cart  
+  
 function addToCart(itemName, itemPrice) {  
     const item = { name: itemName, price: itemPrice };  
     cart.push(item);  
     updateCart(); // Update the UI after adding  
 }  
    
-// Function to update cart display  
+ 
 function updateCart() {  
     const cartList = document.getElementById('cart-list');  
     const cartTotal = document.getElementById('cart-total');  
    
-    // Clear the previous items  
+     
     cartList.innerHTML = '';  
    
     let total = 0;  
    
-    // Render the current items  
+    
     cart.forEach(item => {  
         const li = document.createElement('li');  
         li.textContent = `${item.name} - ₹${item.price}`;  
@@ -431,7 +431,7 @@ function updateCart() {
         total += item.price;  
     });  
    
-    // Update the total price in the UI  
+    
     cartTotal.textContent =` Total: ₹${total}`;  
 }  
 </script>  
